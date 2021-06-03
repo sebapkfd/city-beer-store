@@ -1,4 +1,5 @@
-const Home = () => {
+const Home = (items) => {
+
     return (
         <div>
             <p>Home</p>
