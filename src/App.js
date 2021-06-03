@@ -4,8 +4,10 @@ import ProductPage from './components/ProductPage';
 import Home from './components/Home';
 import Cart from './components/Cart';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import call from './call';
 
 function App() {
+  // call()
   return (
     <div className="App">
       <BrowserRouter>
