@@ -9,10 +9,17 @@ import { useEffect, useState } from 'react';
 
 const App = () => {
     const [items, setItems] = useState(null);
+    const [selected, setSelected] = useState({});
 
     const getData = async () => {
         const response = await call();
         setItems(response);
+    }
+
+    const selectItem = (item) => {
+        if (!(item[0] in selected)) {
+            setSelected( state => ({...state, [item[0]] : item[1]}))
+        }
     }
 
     useEffect(() => {
@@ -32,7 +39,7 @@ const App = () => {
                             <ProductPage items={items}/>
                         </Route>
                         <Route exact path="/home">
-                            <Home items={items}/>
+                            <Home items={items} selectItem={selectItem}/>
                         </Route>
                     </Switch>
                 </BrowserRouter>
