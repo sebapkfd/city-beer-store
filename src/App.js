@@ -33,7 +33,7 @@ const App = () => {
                     <Navbar/>
                     <Switch>
                         <Route exact path="/cart">
-                            <Cart/>
+                            <Cart selected={selected}/>
                         </Route>
                         <Route exact path="/product/:id">
                             <ProductPage items={items} selectItem={selectItem}/>
