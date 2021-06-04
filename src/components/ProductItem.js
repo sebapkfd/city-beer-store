@@ -9,8 +9,8 @@ const ProductItem = (props) => {
 
     return (
         <div className={'product-item'}>
-                <button onClick={(e) => addItem(e)}>add</button>
-                <p>{item[1].name}</p>
+            <button onClick={(e) => addItem(e)}>add</button>
+            <p>{item[1].name}</p>
         </div>
     )
 }

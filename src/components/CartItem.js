@@ -1,16 +1,16 @@
-import { useState } from "react";
 
 const CartItem = (props) => {
-    const {item} = props;
-    const [amount, setAmount] = useState(0);
+    const {item, modifyAmount} = props;
 
     const changeAmount = (e, value) => {
         e.preventDefault();
         if (value === '+') {
-            setAmount(amount => amount + 1);
+            item[1].amount +=1;
+            modifyAmount(item);
         }
-        else if (amount > 0 && value === '-') {
-            setAmount(amount => amount - 1);
+        else if (item[1].amount > 0 && value === '-') {
+            item[1].amount -=1;
+            modifyAmount(item);
         }
     }
 
@@ -18,9 +18,9 @@ const CartItem = (props) => {
         <div>
             <p>{item[1].name}</p>
             <button onClick={(e) =>changeAmount(e, '+')}>+</button>
-            <p>{amount}</p>
+            <p>{item[1].amount}</p>
             <button onClick={(e) =>changeAmount(e, '-')}>-</button>
-            <p>${item[1].price*amount}</p>
+            <p>${item[1].price*item[1].amount}</p>
         </div>
     )
 }

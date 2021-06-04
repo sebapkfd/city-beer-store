@@ -18,7 +18,14 @@ const App = () => {
 
     const selectItem = (item) => {
         if (!(item[0] in selected)) {
+            item[1].amount = 1;
             setSelected( state => ({...state, [item[0]] : item[1]}));
+        }
+    }
+
+    const modifyAmount = (newItem) => {
+        if (newItem[0] in selected) {
+            setSelected( state => ({...state, [newItem[0]] : newItem[1]}));
         }
     }
 
@@ -33,7 +40,7 @@ const App = () => {
                     <Navbar/>
                     <Switch>
                         <Route exact path="/cart">
-                            <Cart selected={selected}/>
+                            <Cart selected={selected} modifyAmount={modifyAmount}/>
                         </Route>
                         <Route exact path="/product/:id">
                             <ProductPage items={items} selectItem={selectItem}/>
