@@ -29,6 +29,14 @@ const App = () => {
         }
     }
 
+    const removeItem = (item) => {
+        if (item[0] in selected) {
+            let newSelected = selected;
+            delete newSelected[item[0]]
+            setSelected(newSelected);
+        }
+    }
+
     useEffect(() => {
         getData();
     }, [])
@@ -40,7 +48,7 @@ const App = () => {
                     <Navbar/>
                     <Switch>
                         <Route exact path="/cart">
-                            <Cart selected={selected} modifyAmount={modifyAmount}/>
+                            <Cart selected={selected} modifyAmount={modifyAmount} removeItem={removeItem}/>
                         </Route>
                         <Route exact path="/product/:id">
                             <ProductPage items={items} selectItem={selectItem}/>
