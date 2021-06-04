@@ -3,7 +3,6 @@ import CartItem from './CartItem';
 const Cart = (props) => {
     const {selected, modifyAmount, removeItem} = props;
     const totalPrice = Object.entries(selected).reduce((acc, cv) => acc + cv[1].price * cv[1].amount, 0);
-    console.log(totalPrice);
 
     return (
         <div>

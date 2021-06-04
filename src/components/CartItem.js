@@ -7,11 +7,11 @@ const CartItem = (props) => {
     const changeAmount = (e, value) => {
         e.preventDefault();
         if (value === '+') {
-            item[1].amount +=1;
+            item[1].amount += 1;
             modifyAmount(item);
         }
         else if (item[1].amount > 0 && value === '-') {
-            item[1].amount -=1;
+            item[1].amount -= 1;
             modifyAmount(item);
         }
     }

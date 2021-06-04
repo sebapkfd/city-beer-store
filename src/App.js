@@ -31,9 +31,11 @@ const App = () => {
 
     const removeItem = (item) => {
         if (item[0] in selected) {
-            let newSelected = selected;
-            delete newSelected[item[0]]
-            setSelected(newSelected);
+            setSelected(prev => {
+                const newSelected = {...prev};
+                delete newSelected[item[0]];
+                return newSelected;
+            })
         }
     }
 
