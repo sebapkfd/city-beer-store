@@ -1,12 +1,17 @@
 import ProductItem from './ProductItem';
+import {Link} from 'react-router-dom';
 
 const Home = (props) => {
     const {items} = props;
 
     return (
-        <div>
+        <div className={'home'}>
             {Object.entries(items).map(item => {
-                return <ProductItem key={item[0]} item={item}/>
+                return (
+                    <Link to={`/product/${item[0]}`} key={item[0]}>
+                        <ProductItem item={item}/>
+                    </Link>
+                    )
             })}
         </div>
     )
