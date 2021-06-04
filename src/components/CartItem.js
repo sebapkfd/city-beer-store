@@ -15,11 +15,13 @@ const CartItem = (props) => {
     }
 
     return (
-        <div>
+        <div className={'cart-item'}>
             <p>{item[1].name}</p>
-            <button onClick={(e) =>changeAmount(e, '+')}>+</button>
-            <p>{item[1].amount}</p>
-            <button onClick={(e) =>changeAmount(e, '-')}>-</button>
+            <div>
+                <button onClick={(e) =>changeAmount(e, '-')}>-</button>
+                <p>{item[1].amount}</p>
+                <button onClick={(e) =>changeAmount(e, '+')}>+</button>
+            </div>
             <p>${item[1].price*item[1].amount}</p>
         </div>
     )

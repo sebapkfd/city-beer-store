@@ -39,3 +39,19 @@ a {
   width: 250px; 
   height: 323px;
 }
+
+.cart-item {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.cart-item div {
+  display: flex;
+  align-items: center;
+}
+
+.cart-item button {
+  height: 3vh;
+  margin: 0 5px;
+}
