@@ -12,7 +12,6 @@ const App = () => {
 
     const getData = async () => {
         const response = await call();
-        console.log(response);
         setItems(response);
     }
 
@@ -30,7 +29,7 @@ const App = () => {
                             <Cart/>
                         </Route>
                         <Route exact path="/product/:id">
-                            <ProductPage/>
+                            <ProductPage items={items}/>
                         </Route>
                         <Route exact path="/home">
                             <Home items={items}/>

@@ -1,8 +1,13 @@
-const Home = (items) => {
+import ProductItem from './ProductItem';
+
+const Home = (props) => {
+    const {items} = props;
 
     return (
         <div>
-            <p>Home</p>
+            {Object.entries(items).map(item => {
+                return <ProductItem key={item[0]} item={item}/>
+            })}
         </div>
     )
 }
