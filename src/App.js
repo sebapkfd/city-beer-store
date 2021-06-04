@@ -18,7 +18,7 @@ const App = () => {
 
     const selectItem = (item) => {
         if (!(item[0] in selected)) {
-            setSelected( state => ({...state, [item[0]] : item[1]}))
+            setSelected( state => ({...state, [item[0]] : item[1]}));
         }
     }
 
@@ -36,9 +36,9 @@ const App = () => {
                             <Cart/>
                         </Route>
                         <Route exact path="/product/:id">
-                            <ProductPage items={items}/>
+                            <ProductPage items={items} selectItem={selectItem}/>
                         </Route>
-                        <Route exact path="/home">
+                        <Route path="/">
                             <Home items={items} selectItem={selectItem}/>
                         </Route>
                     </Switch>
