@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import ProductPage from './components/ProductPage';
 import Home from './components/Home';
-import Cart from './components/Cart';
+import CartPage from './components/CartPage';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import call from './call';
 import { useEffect, useState } from 'react';
@@ -50,7 +50,7 @@ const App = () => {
                     <Navbar/>
                     <Switch>
                         <Route exact path="/cart">
-                            <Cart selected={selected} modifyAmount={modifyAmount} removeItem={removeItem}/>
+                            <CartPage selected={selected} modifyAmount={modifyAmount} removeItem={removeItem}/>
                         </Route>
                         <Route exact path="/product/:id">
                             <ProductPage items={items} selectItem={selectItem}/>
