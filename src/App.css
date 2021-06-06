@@ -35,6 +35,8 @@ a {
 }
 
 .product-item {
+  display: flex;
+  flex-direction: column;
   margin: 0 10px;
   border-radius: 15px;
   box-shadow: rgb(0 0 0 / 30%) 0px 1px 10px 0px;
@@ -131,4 +133,11 @@ a {
 .product-item button {
   background-color: #e44;
   border: none;
+}
+
+.fast-shipping {
+  background-color: #09f;
+  color: white;
+  margin-top: auto;
+  border-radius: 0 0 15px 15px; 
 }
