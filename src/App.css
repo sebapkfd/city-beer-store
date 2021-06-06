@@ -93,6 +93,11 @@ a {
   padding-right: 1%;
 }
 
+.cart-item__options button {
+  background: none;
+  border: none;
+}
+
 .cart-item__total {
   display: flex;
   justify-content: center;

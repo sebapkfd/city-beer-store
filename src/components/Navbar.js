@@ -13,8 +13,11 @@ const Navbar = () => {
                 />
             </Link>
             <Link to='/cart'>
-                <h1>Carro</h1>
+                <span class="material-icons">
+                shopping_bag
+                </span>
             </Link>
+            
         </div>
     )
 }

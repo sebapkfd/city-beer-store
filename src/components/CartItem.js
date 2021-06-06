@@ -22,6 +22,19 @@ const CartItem = (props) => {
         setRender(false);
     }
 
+    const plusButton = <span class="material-icons">
+    control_point
+    </span>
+
+    const minusButton = <span class="material-icons">
+    remove_circle_outline
+    </span>
+
+    const deleteButton = <span class="material-icons">
+    delete
+    </span>
+    
+
     if (render) {
         return (
             <div className={'cart-item'}>
@@ -29,10 +42,10 @@ const CartItem = (props) => {
                     <p>{item[1].name}</p>
                 </div>
                 <div className={'cart-item__options'}>
-                    <button onClick={(e) => changeAmount(e, '-')}>-</button>
+                    <button onClick={(e) => changeAmount(e, '-')}>{minusButton}</button>
                     <p>{item[1].amount}</p>
-                    <button onClick={(e) => changeAmount(e, '+')}>+</button>
-                    <button onClick={(e) => deleteItem(e)}>Delete</button>
+                    <button onClick={(e) => changeAmount(e, '+')}>{plusButton}</button>
+                    <button onClick={(e) => deleteItem(e)}>{deleteButton}</button>
                 </div>
                 <div className={'cart-item__total'}>
                     <p>${item[1].price*item[1].amount}</p>
