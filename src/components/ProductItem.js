@@ -22,9 +22,9 @@ const ProductItem = (props) => {
             </div>
             {/* <img src={item[1].image}
                 alt={item[1].name}/> */}
-            <p>{item[1].name}</p>
+            <p className={'product-item__name'}>{item[1].name}</p>
             <p>{item[1]['units-in-pack']} {unit}</p>
-            <p>${item[1].price}</p>
+            <p className={'product-item__price'}>${item[1].price}</p>
             {fastShipping}
         </div>
     )

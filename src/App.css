@@ -41,7 +41,7 @@ a {
   border-radius: 15px;
   box-shadow: rgb(0 0 0 / 30%) 0px 1px 10px 0px;
   width: 250px; 
-  height: 323px;
+  /* height: 323px; */
 }
 
 .cart-item {
@@ -140,4 +140,16 @@ a {
   color: white;
   margin-top: auto;
   border-radius: 0 0 15px 15px; 
+}
+
+.product-item p {
+  margin: 0;
+}
+
+.product-item__name {
+  font-weight: bold;
+}
+
+.product-item__price {
+  color: rgb(124, 124, 124);
 }
