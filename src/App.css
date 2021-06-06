@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  font-family: sans-serif;
+  font-family: Verdana, sans-serif;
 }
 
 body {
@@ -18,9 +18,10 @@ a {
 
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  margin-top: 5px;
+  margin: 5vh 0 14vh 0;
+  font-size: 0.6rem;
 }
 
 .navbar img {
