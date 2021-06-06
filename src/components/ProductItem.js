@@ -15,16 +15,15 @@ const ProductItem = (props) => {
     shopping_bag
     </span>
 
-    const fastShipping = (item[1]['fast-shipping']) ? <div className={'fast-shipping'}>Envio rápido</div> : null;
+    const fastShipping = (item[1]['fast-shipping']) ? <div className={'fast-shipping'}>Envio rápido</div> : <div className={'space'}></div> ;
 
     return (
         <div className={'product-item'}>
-            <div>
+            <div className={'add-button-container'}>
                 <button onClick={(e) => addItem(e)}>{addButton}</button>
             </div>
             <img src={assets[item[0]]}
-                alt={assets[item[0]]}/>
-            {/* {assets[item[0]]} */}
+                alt={item[0]}/>
             <p className={'product-item__name'}>{item[1].name}</p>
             <p>{item[1]['units-in-pack']} {unit}</p>
             <p className={'product-item__price'}>${item[1].price}</p>
