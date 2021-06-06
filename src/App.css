@@ -70,6 +70,9 @@ a {
   color: white;
 }
 
+.store-cart:nth-child(3) .store-name{
+  background-color: #f36;
+}
 
 .cart-item__options {
   width: 25%;
