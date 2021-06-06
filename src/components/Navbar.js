@@ -13,7 +13,7 @@ const Navbar = () => {
                 />
             </Link>
             <Link to='/cart'>
-                <span class="material-icons">
+                <span className="material-icons">
                 shopping_bag
                 </span>
             </Link>

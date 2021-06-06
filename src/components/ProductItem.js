@@ -9,7 +9,7 @@ const ProductItem = (props) => {
 
     const unit = (item[1]['units-in-pack'] === 6) ? 'pack' : 'Unidad';
 
-    const addButton = <span class="material-icons">
+    const addButton = <span className="material-icons">
     shopping_bag
     </span>
 

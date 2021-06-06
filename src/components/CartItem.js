@@ -22,15 +22,15 @@ const CartItem = (props) => {
         setRender(false);
     }
 
-    const plusButton = <span class="material-icons">
+    const plusButton = <span className="material-icons">
     control_point
     </span>
 
-    const minusButton = <span class="material-icons">
+    const minusButton = <span className="material-icons">
     remove_circle_outline
     </span>
 
-    const deleteButton = <span class="material-icons">
+    const deleteButton = <span className="material-icons">
     delete
     </span>
     
