@@ -7,11 +7,12 @@ const CartPage = (props) => {
 
     return (
         <div>
+            <p className={'cart-page-content'}>Tu Carrito</p>
             {stores.map(store => {
                 return <StoreCart key={store} selected={selected} modifyAmount={modifyAmount} removeItem={removeItem} store={store}/>
             })}
-            <p>Total a Pagar</p>
-            <p>${totalPrice}</p>
+            <p className={'cart-page-content'}>Total a Pagar</p>
+            <p className={'cart-page-content'}>${totalPrice}</p>
             <button>Pagar</button>
         </div>
     )

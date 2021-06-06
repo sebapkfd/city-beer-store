@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   font-family: Verdana, sans-serif;
+  margin-bottom: 10vh;
 }
 
 body {
@@ -84,9 +85,6 @@ a {
   width: 15%;
 }
 
-.cart-item__total p {
-}
-
 .store-total {
   width: 50%;
   display: flex;
@@ -97,4 +95,9 @@ a {
 .store-total__price {
   width: 15%;
   margin-left: 3%;
+}
+
+.cart-page-content {
+  font-size: large;
+  font-weight: bold;
 }
