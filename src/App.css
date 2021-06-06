@@ -74,6 +74,17 @@ a {
   background-color: #f36;
 }
 
+.pay-button {
+  background-color: #09f;
+  color: white;
+  border: none;
+  padding: 0.5em 3em;
+  border-radius: 15px;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+
 .cart-item__options {
   width: 25%;
   display: flex;

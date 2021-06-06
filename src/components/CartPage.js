@@ -13,7 +13,7 @@ const CartPage = (props) => {
             })}
             <p className={'cart-page-content'}>Total a Pagar</p>
             <p className={'cart-page-content'}>${totalPrice}</p>
-            <button>Pagar</button>
+            <button className={'pay-button'}>Pagar</button>
         </div>
     )
 }
