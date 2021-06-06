@@ -6,12 +6,17 @@ const StoreCart = (props) => {
     const storePrice = storeItems.reduce((acc, cv) => acc + cv[1].price * cv[1].amount, 0);
 
     return (
-        <div>
-            <p>{store}</p>
+        <div className={'store-cart'}>
+            <p className={'store-name'}>{store}</p>
             {storeItems.map(item => {
                 return <CartItem key={item[0]} item={item} modifyAmount={modifyAmount} removeItem={removeItem}/>
             })}
-            <p>Total en esta tienda ${storePrice}</p>
+            <div className={'store-total'}>
+                <p>Total en esta tienda </p>
+                <div className={'store-total__price'}>
+                    <p>${storePrice}</p>
+                </div>
+            </div>
         </div>
     )
 }
