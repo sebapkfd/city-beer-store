@@ -120,3 +120,12 @@ a {
   font-size: large;
   font-weight: bold;
 }
+
+.product-item .material-icons{
+  color: rgb(255, 255, 255); 
+}
+.product-item button {
+  background-color: rgb(184, 61, 61);
+  background-color: #e44;
+  border: none;
+}
