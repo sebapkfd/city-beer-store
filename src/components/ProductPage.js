@@ -24,7 +24,7 @@ const ProductPage = (props) => {
                     <p className={'store-name'}>{item.store}</p>
                     <p className={'product-item__units'}>{item['units-in-pack']} {unit}</p>
                     <p>${item.price}</p>
-                    <button onClick={(e) => addItem(e)}>add</button>
+                    <button onClick={(e) => addItem(e)}>Agregar al carrito</button>
                 </div>
             </div>
             <div>
