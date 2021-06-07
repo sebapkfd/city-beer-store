@@ -1,6 +1,5 @@
 import assets from './assets';
 
-
 const ProductItem = (props) => {
     const {item, selectItem} = props;
 
@@ -22,8 +21,7 @@ const ProductItem = (props) => {
             <div className={'add-button-container'}>
                 <button onClick={(e) => addItem(e)}>{addButton}</button>
             </div>
-            <img src={assets[item[0]]}
-                alt={item[0]}/>
+            <img src={assets[item[0]]} alt={item[0]}/>
             <p className={'product-item__name'}>{item[1].name}</p>
             <p>{item[1]['units-in-pack']} {unit}</p>
             <p className={'product-item__price'}>${item[1].price}</p>

@@ -1,22 +1,40 @@
 import { useParams } from "react-router";
+import assets from './assets';
 
 const ProductPage = (props) => {
     const {items, selectItem} = props;
     const {id} = useParams();
     const item = items[id];
-    // console.log(item.image);
 
     const addItem = (e) => {
         e.preventDefault();
         selectItem([id, item]);
     }
 
+    const unit = (item['units-in-pack'] === 6) ? 'pack' : 'Unidad';
+
     return (
-        <div>
-            <p>{item.name}</p>
-            {/* <img src={item.image}
-                alt={item.name}/> */}
-            <button onClick={(e) => addItem(e)}>add</button>
+        <div className={'product-page'}>
+            <div>
+                <div className={'product-page__img'}>
+                    <img src={assets[id]} alt={item.name}/>
+                </div>
+                <div className={'product-page__options'}>
+                    <p>{item.name}</p>
+                    <p>{item.store}</p>
+                    <p>{item['units-in-pack']} {unit}</p>
+                    <p>${item.price}</p>
+                    <button onClick={(e) => addItem(e)}>add</button>
+                </div>
+            </div>
+            <div>
+                <div className={'product-page__description-title'}>
+                    <p>Descripción</p>
+                </div>
+                <div className={'product-page__description'}>
+                    <span>{item.description}</span>
+                </div>
+            </div>
         </div>
     )
 }
