@@ -64,12 +64,13 @@ a {
 }
 
 .store-name {
-  background-color: #09f;
+  background-color: rgb(88, 188, 255);
   height: 1.5em;
   width: fit-content;
   padding: 0 1em;
   border-radius: 15px;
   color: white;
+  font-weight: bold;
 }
 
 .store-cart:nth-child(3) .store-name{
@@ -77,7 +78,7 @@ a {
 }
 
 .pay-button {
-  background-color: #09f;
+  background-color: rgb(88, 188, 255);
   color: white;
   border: none;
   padding: 0.5em 3em;
@@ -85,7 +86,6 @@ a {
   font-size: 1em;
   font-weight: bold;
 }
-
 
 .cart-item__options {
   width: 25%;
@@ -152,7 +152,7 @@ a {
 }
 
 .product-item p {
-  margin: 0;
+  margin: 5px 0 ;
 }
 
 .product-item__name {
@@ -174,7 +174,6 @@ a {
 }
 
 .product-page div {
-  margin-top: 10px;
   display: flex;
   align-items: center;
 }
@@ -199,7 +198,7 @@ a {
 
 .product-page__options * {
   align-self: flex-start;
-  margin-left: 10px;
+  margin: 5px 0 15px 10px;
 }
 
 .product-page__description-title {
@@ -216,4 +215,18 @@ a {
   margin-left: 10px;
   font-size: 12px;
   color: rgb(94 87 87);
+}
+
+.product-item__units {
+  color: rgb(97, 97, 97);
+}
+
+.product-page__options button {
+  background-color: rgb(252, 74, 74);
+  color: white;
+  border: none;
+  padding: 0.5em 3em;
+  border-radius: 15px;
+  font-size: 1em;
+  font-weight: bold;
 }

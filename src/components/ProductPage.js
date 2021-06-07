@@ -20,9 +20,9 @@ const ProductPage = (props) => {
                     <img src={assets[id]} alt={item.name}/>
                 </div>
                 <div className={'product-page__options'}>
-                    <p>{item.name}</p>
-                    <p>{item.store}</p>
-                    <p>{item['units-in-pack']} {unit}</p>
+                    <p className={'product-item__name'}>{item.name}</p>
+                    <p className={'store-name'}>{item.store}</p>
+                    <p className={'product-item__units'}>{item['units-in-pack']} {unit}</p>
                     <p>${item.price}</p>
                     <button onClick={(e) => addItem(e)}>add</button>
                 </div>
