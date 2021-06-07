@@ -130,6 +130,7 @@ a {
 .product-item .material-icons{
   color: rgb(255, 255, 255); 
 }
+
 .product-item button {
   background-color: #e44;
   height: 5vh;
@@ -229,4 +230,14 @@ a {
   border-radius: 15px;
   font-size: 1em;
   font-weight: bold;
+  transition: 0.2s;
+}
+
+.product-page__options button:hover {
+  color: rgb(252, 74, 74);
+  background-color: white;
+}
+
+.store-cart .material-icons:hover {
+  color: rgb(124, 124, 124);
 }
